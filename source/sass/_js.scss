@@ -1,0 +1,85 @@
+.js_window {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  width: 250px;
+  display: flex;
+  vertical-align: middle;
+  background: green;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+
+  .row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    line-height: 2rem;
+
+    &--bot {
+      height: 30px;
+      border: 1px solid red;
+    }
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .value {
+    width: 20%;
+    flex-grow: 0;
+  }
+
+  .name {
+    background: rgba(255, 255, 255, 0.6);
+    color: blue;
+    font-size: 25px;
+    flex-grow: 1;
+    line-height: 35px;
+    cursor: pointer;
+  }
+
+  .conrol {
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid red;
+    cursor: pointer;
+
+    &:hover {
+      background: red;
+    }
+  }
+
+  .js_hide {
+    opacity: 1 !important;
+  }
+
+  .left,
+  .right {
+    width: 25%;
+  }
+
+  .mid {
+    flex-grow: 1;
+  }
+
+  &--min {
+    width: 150px;
+
+    .left,
+    .right {
+      display: none;
+    }
+
+    .value {
+      display: none;
+    }
+
+    .row--bot {
+      display: none;
+    }
+  }
+}

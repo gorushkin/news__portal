@@ -7,11 +7,212 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <title>Title</title>
+  <title>Новоси культуры</title>
 </head>
 
 <body>
-  //=require templates/script.html
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="header__title">Новости культуры</h1>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a href="#">НОВОСТИ</a></li>
+          <li class="header__item"><a href="#">ОБЗОРЫ</a></li>
+          <li class="header__item"><a href="#">МУЗЫКА</a></li>
+          <li class="header__item"><a href="#">АРХИТЕКТУРА</a></li>
+          <li class="header__item"><a href="#">КИНО</a></li>
+          <li class="header__item"><a href="#">ТЕАТР</a></li>
+          <li class="header__item"><a href="#">ЛИТЕРАТУРА</a></li>
+          <li class="header__item"><a href="#">РЕЛИГИЯ</a></li>
+          <li class="header__item"><a href="#">ЖИВОПИСЬ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__slider slider">
+      <ul class="slider__list">
+        <li class="slider__item card">
+          <div class="wrapper">
+            <a href="" class="card__link">Новое</a>
+            <h2 class="card__title">Подводный отель</h2>
+            <div class="card__slider-controls">
+              <a href="" class="card__prev-btn">Предыдущая</a>
+              <a href="" class="card__next-btn">Следущая</a>
+            </div>
+            <p class="card__text">
+              Как известно, Дубай – город контрастов. Самые революционные и фантастические мечты архитекторов способен
+              воплотить в жизнь этот мегаполис, построенный на нефти и за счет нефти
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="wrapper">
+      <div class="main__column main__column--left">
+        <section class="neww">
+          <h3 class="main__title">Новости</h3>
+          <ul class="news__list">
+            <li class="news__item">
+              <h4 class="news__title">Новости культуры России и всего мира</h4>
+              <p class="news__txt">В минувшие выходные в Москве на фестивале «Оберег» вручили первую премию Russian
+                World Music Awards</p>
+            </li>
+            <li class="news__item">
+              <h4 class="news__title">Открытие нового памятника Евгению Леонову</h4>
+              <p class="news__txt">10 сентября в 15:00 был открыт памятник писателю</p>
+            </li>
+            <li class="news__item">
+              <h4 class="news__title">Беседы с писателями</h4>
+              <p class="news__txt">Русские писатели говорят о важности искусства</p>
+            </li>
+            <li class="news__item">
+              <h4 class="news__title">День и ночь св. Патрика: встреча старых друзей</h4>
+              <p class="news__txt">Не Джойсом единым живет Ирландия! </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="reviews">
+          <h3 class="main__title">Обзоры</h3>
+          <ul class="reviews__list">
+            <li class="reviews__item review">
+              <div class="review__img-wrapper">
+                <div class="review__hover-block">
+                  <span class="review__viewers">37</span>
+                  <span class="review__comments">22</span>
+                  <span class="review__bookmark-link"></span>
+                </div>
+                <div class="review__description">
+                  <h4 class="review__title">«Шальные годы» Монпарнаса</h4>
+                  <p class="rewiew__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября
+                    проходит выставка «Шальные годы Монпарнаса»</p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item review">
+              <div class="review__img-wrapper">
+                <div class="review__hover-block">
+                  <span class="review__viewers">37</span>
+                  <span class="review__comments">22</span>
+                  <span class="review__bookmark-link"></span>
+                </div>
+                <div class="review__description">
+                  <h4 class="review__title">Анатомия за 30 секунд</h4>
+                  <p class="rewiew__text">Сейчас, когда мир открыт нараспашку для человека и его познавательных
+                    изысканий, интерес к научно-популярной литературе заметно вырос</p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item review">
+              <div class="review__img-wrapper">
+                <div class="review__hover-block">
+                  <span class="review__viewers">37</span>
+                  <span class="review__comments">22</span>
+                  <span class="review__bookmark-link"></span>
+                </div>
+                <div class="review__description">
+                  <h4 class="review__title">Русские балетные сезоны </h4>
+                  <p class="rewiew__text">В Новом Иерусалиме стартовал необычный культурно-развлекательный спектакль,
+                    который покажут в новом театре</p>
+                </div>
+              </div>
+            </li>
+            <li class="reviews__item review">
+              <div class="review__img-wrapper">
+                <div class="review__hover-block">
+                  <span class="review__viewers">37</span>
+                  <span class="review__comments">22</span>
+                  <span class="review__bookmark-link"></span>
+                </div>
+                <div class="review__description">
+                  <h4 class="review__title">Сферические чудаки</h4>
+                  <p class="rewiew__text">Корреспондентам «Культурного обозревателя» посчастливилось побывать в театре
+                    «Сфера» на премьере спектакля «Чудаки и зануды» </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="reviews__pagination pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item pagination__item--current"><a href="#" class="pagination__link">1</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link">35</a></li>
+            </ul>
+          </div>
+          <div class="reviews__promo">
+            <h3 class="review__promo-title">Ох, уж этот балет</h3>
+            <a href="" class="review__promo-link">Смотреть</a>
+          </div>
+        </section>
+      </div>
+      <div class="main__column main__column--right">
+        <section class="events">
+          <ul class="events__list">
+            <li class="events__item">
+              <h3 class="events__title">ВОЗДУШНЫЕ ШАРЫ</h3>
+              <a href="" class="events__link"></a>
+            </li>
+            <li class="events__item">
+              <h3 class="events__title">НЕОБЫЧНАЯ ФОТОСЕССИЯ</h3>
+              <a href="" class="events__link"></a>
+            </li>
+            <li class="events__item">
+              <h3 class="events__title">Выставка птиц</h3>
+              <a href="" class="events__link"></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="main__bottom-row">
+        <section class="read-more">
+          <div class="read-more__slider">
+            <ul class="read-more__list">
+              <li class="read-more__item">
+                <span class="read-more__title">КАК все успевать</span>
+                <a href="" class="read-more__link">Смотреть</a>
+              </li>
+              <li class="read-more__item">
+                <span class="read-more__title">КАК все успевать</span>
+                <a href="" class="read-more__link">Смотреть</a>
+              </li>
+              <li class="read-more__item">
+                <span class="read-more__title">КАК все успевать</span>
+                <a href="" class="read-more__link">Смотреть</a>
+              </li>
+              <li class="read-more__item">
+                <span class="read-more__title">КАК все успевать</span>
+                <a href="" class="read-more__link">Смотреть</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <h1 class="header__title">Новости культуры</h1>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a href="#">НОВОСТИ</a></li>
+          <li class="header__item"><a href="#">ОБЗОРЫ</a></li>
+          <li class="header__item"><a href="#">МУЗЫКА</a></li>
+          <li class="header__item"><a href="#">АРХИТЕКТУРА</a></li>
+          <li class="header__item"><a href="#">КИНО</a></li>
+          <li class="header__item"><a href="#">ТЕАТР</a></li>
+          <li class="header__item"><a href="#">ЛИТЕРАТУРА</a></li>
+          <li class="header__item"><a href="#">РЕЛИГИЯ</a></li>
+          <li class="header__item"><a href="#">ЖИВОПИСЬ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -99,12 +99,21 @@
   width: 10px;
   height: 20px;
 
+  svg {
+    stroke: #ffffff;
+  }
+
   &--prev {
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   &--next {
-    margin-left: 10px;
+    margin-left: 20px;
   }
 
+  &--disable {
+    svg {
+      stroke: #ffffff3d;
+    }
+  }
 }

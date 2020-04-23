@@ -1,10 +1,10 @@
-
 const path = {
   build: {
     css: 'build/css',
     scss: 'build/scss',
-    img: 'source/img',
+    img: 'build/img',
     js: 'build/js',
+    fonts: 'build/fonts/',
   },
   src: {
     css: 'source/sass/style.scss',
@@ -23,12 +23,11 @@ const path = {
     css: 'source/sass/**/*.{scss,sass}',
     js: 'source/js/**/*.*',
     img: 'source/img/**',
+    fonts: 'source/fonts/**',
   },
   zipFolder: 'C:/Users/Alex/Documents/artyom/webdev/залить',
 };
 
-
-// const gulp = require('gulp');
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
@@ -66,13 +65,13 @@ const css = () => gulp.src(path.src.css)
   .pipe(server.stream());
 
 const copy = () => gulp.src([
-  path.src.img,
-  path.src.fonts,
-  path.src.pp,
-  path.src.scss,
-], {
-  base: 'source',
-})
+    path.src.img,
+    path.src.fonts,
+    path.src.pp,
+    path.src.scss,
+  ], {
+    base: 'source',
+  })
   .pipe(gulp.dest('build'));
 
 const refresh = (done) => {
@@ -111,6 +110,9 @@ const vendorJs = () => gulp.src(path.src.jsVendors)
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest(path.build.js));
 
+const copyFonts = () => gulp.src(path.src.fonts)
+  .pipe(gulp.dest(path.build.fonts));
+
 const modulesJs = () => gulp.src(path.src.jsModules)
   .pipe(concat('main.js'))
   .pipe(gulp.dest(path.build.js));
@@ -134,12 +136,14 @@ const watch = () => {
   gulp.watch(path.watch.css, css);
   gulp.watch(path.watch.img, gulp.series(copy, refresh));
   gulp.watch(path.watch.js, gulp.series(js, refresh));
+  gulp.watch(path.watch.fonts, gulp.series(copyFonts, refresh));
 };
 
 const start = gulp.series(build, watch);
 
 gulp.task('css', () => css());
 gulp.task('js', js);
+gulp.task('copyFonts', copyFonts);
 gulp.task('clean', () => clean());
 gulp.task('copy', () => copy());
 gulp.task('watch', watch);

@@ -4,16 +4,18 @@ $laptop-width: 992px;
 $desktop-width: 1200px;
 $desktop-full: 1600px;
 $desktop-wide: 1920px;
-$wrapper-width: 1600px;
+$wrapper-width: 1228px;
 
 $mobile-width-only: 767px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 // Шрифты
-$font-first: "Roboto",
-sans-serif;
-// $font-roboto: "Roboto", "Arial", sans-serif;
+// $font-first: "Roboto", sans-serif;
+$font2: "Playfair Display", sans-serif;
+$font1: "Raleway", sans-serif;
 
 // Цвета
-// $color-black: #232323;
+$color-one: #232323;
+$color-two: #232323;
+$color-accent: #FF7931;

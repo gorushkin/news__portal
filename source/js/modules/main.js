@@ -2,7 +2,6 @@ const prevBtns = document.querySelectorAll('.card__arrow-btn--prev');
 const nextBtns = document.querySelectorAll('.card__arrow-btn--next');
 
 const disableBtns = (btnList) => {
-  console.log(btnList);
   btnList.forEach((btn) => {
     btn.classList.toggle('card__arrow-btn--disable');
   });

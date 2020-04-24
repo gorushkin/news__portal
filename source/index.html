@@ -67,28 +67,41 @@
     </div>
   </header>
 
-  <!-- <main class="main">
+  <main class="main">
     <div class="wrapper">
       <div class="main__column main__column--left">
-        <section class="neww">
+        <!-- TODO: проверить на переполнение текстом карточки -->
+        <section class="news">
           <h3 class="main__title">Новости</h3>
           <ul class="news__list">
-            <li class="news__item">
-              <h4 class="news__title">Новости культуры России и всего мира</h4>
-              <p class="news__txt">В минувшие выходные в Москве на фестивале «Оберег» вручили первую премию Russian
-                World Music Awards</p>
+            <li class="news__item news__item--big">
+              <div class="news__img-wrap"></div>
+              <div class="news__description">
+                <h4 class="news__title">Новости культуры России и всего мира</h4>
+                <p class="news__txt">В минувшие выходные в Москве на фестивале «Оберег» вручили первую премию Russian
+                  World Music Awards</p>
+              </div>
             </li>
             <li class="news__item">
-              <h4 class="news__title">Открытие нового памятника Евгению Леонову</h4>
-              <p class="news__txt">10 сентября в 15:00 был открыт памятник писателю</p>
+              <div class="news__img-wrap"></div>
+              <div class="news__description">
+                <h4 class="news__title">Открытие нового памятника Евгению Леонову</h4>
+                <p class="news__txt">10 сентября в 15:00 был открыт памятник писателю</p>
+              </div>
             </li>
             <li class="news__item">
-              <h4 class="news__title">Беседы с писателями</h4>
-              <p class="news__txt">Русские писатели говорят о важности искусства</p>
+              <div class="news__img-wrap"></div>
+              <div class="news__description">
+                <h4 class="news__title">Беседы с писателями</h4>
+                <p class="news__txt">Русские писатели говорят о важности искусства</p>
+              </div>
             </li>
             <li class="news__item">
-              <h4 class="news__title">День и ночь св. Патрика: встреча старых друзей</h4>
-              <p class="news__txt">Не Джойсом единым живет Ирландия! </p>
+              <div class="news__img-wrap"></div>
+              <div class="news__description">
+                <h4 class="news__title">День и ночь св. Патрика: встреча старых друзей</h4>
+                <p class="news__txt">Не Джойсом единым живет Ирландия! </p>
+              </div>
             </li>
           </ul>
         </section>
@@ -97,78 +110,107 @@
           <h3 class="main__title">Обзоры</h3>
           <ul class="reviews__list">
             <li class="reviews__item review">
-              <div class="review__img-wrapper">
-                <div class="review__hover-block">
-                  <span class="review__viewers">37</span>
-                  <span class="review__comments">22</span>
-                  <span class="review__bookmark-link"></span>
+              <a href="#" class="review__link">
+                <div class="review__img-wrapper">
+                  <div class="review__hover-block">
+                    <div class="review__stats">
+                      <span class="review__viewers">37</span>
+                      <span class="review__comments">22</span>
+                    </div>
+                    <span class="review__bookmark-link"></span>
+                  </div>
                 </div>
                 <div class="review__description">
                   <h4 class="review__title">«Шальные годы» Монпарнаса</h4>
                   <p class="rewiew__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября
                     проходит выставка «Шальные годы Монпарнаса»</p>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="reviews__item review">
-              <div class="review__img-wrapper">
-                <div class="review__hover-block">
-                  <span class="review__viewers">37</span>
-                  <span class="review__comments">22</span>
-                  <span class="review__bookmark-link"></span>
+              <a href="#" class="review__link">
+                <div class="review__img-wrapper">
+                  <div class="review__hover-block">
+                    <div class="review__stats">
+                      <span class="review__viewers">37</span>
+                      <span class="review__comments">22</span>
+                    </div>
+                    <span class="review__bookmark-link"></span>
+                  </div>
                 </div>
                 <div class="review__description">
                   <h4 class="review__title">Анатомия за 30 секунд</h4>
                   <p class="rewiew__text">Сейчас, когда мир открыт нараспашку для человека и его познавательных
                     изысканий, интерес к научно-популярной литературе заметно вырос</p>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="reviews__item review">
-              <div class="review__img-wrapper">
-                <div class="review__hover-block">
-                  <span class="review__viewers">37</span>
-                  <span class="review__comments">22</span>
-                  <span class="review__bookmark-link"></span>
+              <a href="#" class="review__link">
+                <div class="review__img-wrapper">
+                  <div class="review__hover-block">
+                    <div class="review__stats">
+                      <span class="review__viewers">37</span>
+                      <span class="review__comments">22</span>
+                    </div>
+                    <span class="review__bookmark-link"></span>
+                  </div>
                 </div>
                 <div class="review__description">
                   <h4 class="review__title">Русские балетные сезоны </h4>
                   <p class="rewiew__text">В Новом Иерусалиме стартовал необычный культурно-развлекательный спектакль,
                     который покажут в новом театре</p>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="reviews__item review">
-              <div class="review__img-wrapper">
-                <div class="review__hover-block">
-                  <span class="review__viewers">37</span>
-                  <span class="review__comments">22</span>
-                  <span class="review__bookmark-link"></span>
+              <a href="#" class="review__link">
+                <div class="review__img-wrapper">
+                  <div class="review__hover-block">
+                    <div class="review__stats">
+                      <span class="review__viewers">37</span>
+                      <span class="review__comments">22</span>
+                    </div>
+                    <span class="review__bookmark-link"></span>
+                  </div>
                 </div>
                 <div class="review__description">
                   <h4 class="review__title">Сферические чудаки</h4>
                   <p class="rewiew__text">Корреспондентам «Культурного обозревателя» посчастливилось побывать в театре
                     «Сфера» на премьере спектакля «Чудаки и зануды» </p>
                 </div>
-              </div>
+              </a>
             </li>
           </ul>
           <div class="reviews__pagination pagination">
+            <a href="" class="pagination__btn pagination__btn--prev">
+              <svg width="7" height="14" viewbox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#arrow-pgn-prev"></use>
+              </svg>
+            </a>
             <ul class="pagination__list">
-              <li class="pagination__item pagination__item--current"><a href="#" class="pagination__link">1</a></li>
+              <li class="pagination__item pagination__item--current"><a href="#"
+                  class="pagination__link pagination__link--current">1</a></li>
               <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
               <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
               <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
               <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+              <li class="pagination__item"><a href="#" class="pagination__link pagination__link--empty">...</a></li>
               <li class="pagination__item"><a href="#" class="pagination__link">35</a></li>
             </ul>
+            <a href="" class="pagination__btn pagination__btn--next">
+              <svg width="7" height="14" viewbox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#arrow-pgn-next"></use>
+              </svg>
+            </a>
           </div>
           <div class="reviews__promo">
             <h3 class="review__promo-title">Ох, уж этот балет</h3>
-            <a href="" class="review__promo-link">Смотреть</a>
+            <a href="" class="review__promo-link main__link"><span>Смотреть</span></a>
           </div>
         </section>
       </div>
+
       <div class="main__column main__column--right">
         <section class="events">
           <ul class="events__list">
@@ -187,6 +229,7 @@
           </ul>
         </section>
       </div>
+
       <div class="main__bottom-row">
         <section class="read-more">
           <div class="read-more__slider">
@@ -212,7 +255,7 @@
         </section>
       </div>
     </div>
-  </main> -->
+  </main>
 
   <!-- <footer class="footer">
     <div class="wrapper">
@@ -232,12 +275,19 @@
       </nav>
     </div>
   </footer> -->
+
   <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="arrow-btn-left">
-      <path d="M0.707088 9.85781L9.25223 1.3915L9.21627 9.15009L9.17339 18.4029L0.707088 9.85781Z"/>
+      <path d="M0.707088 9.85781L9.25223 1.3915L9.21627 9.15009L9.17339 18.4029L0.707088 9.85781Z" />
     </symbol>
     <symbol id="arrow-btn-right">
-      <path d="M9.71854 9.67104L1.17341 1.20474L1.20936 8.96332L1.25224 18.2162L9.71854 9.67104Z"/>
+      <path d="M9.71854 9.67104L1.17341 1.20474L1.20936 8.96332L1.25224 18.2162L9.71854 9.67104Z" />
+    </symbol>
+    <symbol id="arrow-pgn-prev">
+      <path d="M0.707092 7.00326L5.88346 1.87465L5.86185 6.53794L5.8357 12.1796L0.707092 7.00326Z"/>
+    </symbol>
+    <symbol id="arrow-pgn-next">
+      <path d="M6.01209 7.00326L0.835719 1.87465L0.85733 6.53794L0.883474 12.1796L6.01209 7.00326Z"/>
     </symbol>
   </svg>
   //=require templates/script.html

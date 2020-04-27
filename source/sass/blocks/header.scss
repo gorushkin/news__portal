@@ -54,7 +54,6 @@
 .header__swiper {
   min-height: 464px;
   position: relative;
-
   width: 100%;
 
   .swiper-container {
@@ -68,4 +67,81 @@
   }
 }
 
+.header__slider-controls {
+  width: 100%;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 0 107px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 115px;
+  z-index: 5;
+  color: #ffffff;
 
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background: #ffffff;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.header__btn-wrapper {
+  width: 50%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.header__btn {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 64px;
+    height: 1px;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--prev::after {
+    left: calc(100% + 10px);
+  }
+
+  &--next::after {
+    right: calc(100% + 10px);
+  }
+}
+
+.header__arrow-btn {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+
+  svg {
+    stroke: #ffffff;
+  }
+
+  &--prev {
+    margin-right: 20px;
+  }
+
+  &--next {
+    margin-left: 20px;
+  }
+
+  &--disable {
+    svg {
+      stroke: #ffffff3d;
+    }
+  }
+}

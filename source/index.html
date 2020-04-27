@@ -204,56 +204,60 @@
               </svg>
             </a>
           </div>
-          <div class="reviews__promo">
-            <h3 class="review__promo-title">Ох, уж этот балет</h3>
-            <a href="" class="review__promo-link main__link"><span>Смотреть</span></a>
-          </div>
         </section>
+
+        <div class="main__promo">
+          <h3 class="main__promo-title">Ох, уж этот балет</h3>
+          <a href="" class="main__promo-link main__link"><span>Смотреть</span></a>
+        </div>
+
       </div>
 
       <div class="main__column main__column--right">
         <section class="events">
           <ul class="events__list">
             <li class="events__item">
-              <h3 class="events__title">ВОЗДУШНЫЕ ШАРЫ</h3>
-              <a href="" class="events__link"></a>
+              <h3 class="events__title">ВОЗДУШНЫЕ ШАРЫ</h3>
+              <a href="" class="events__link main__link"><span>Смотреть</span></a>
             </li>
             <li class="events__item">
-              <h3 class="events__title">НЕОБЫЧНАЯ ФОТОСЕССИЯ</h3>
-              <a href="" class="events__link"></a>
+              <h3 class="events__title events__title--white">НЕОБЫЧНАЯ ФОТОСЕССИЯ</h3>
+              <a href="" class="events__link main__link"><span>Смотреть</span></a>
             </li>
             <li class="events__item">
-              <h3 class="events__title">Выставка птиц</h3>
-              <a href="" class="events__link"></a>
+              <h3 class="events__title events__title--white">Выставка птиц</h3>
+              <a href="" class="events__link main__link"><span>Смотреть</span></a>
             </li>
           </ul>
         </section>
       </div>
 
-      <div class="main__bottom-row">
-        <section class="read-more">
-          <div class="read-more__slider">
-            <ul class="read-more__list">
-              <li class="read-more__item">
-                <span class="read-more__title">КАК все успевать</span>
-                <a href="" class="read-more__link">Смотреть</a>
-              </li>
-              <li class="read-more__item">
-                <span class="read-more__title">КАК все успевать</span>
-                <a href="" class="read-more__link">Смотреть</a>
-              </li>
-              <li class="read-more__item">
-                <span class="read-more__title">КАК все успевать</span>
-                <a href="" class="read-more__link">Смотреть</a>
-              </li>
-              <li class="read-more__item">
-                <span class="read-more__title">КАК все успевать</span>
-                <a href="" class="read-more__link">Смотреть</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
+      <section class="read-more main__bottom-row">
+        <div class="read-more__swiper swiper-container">
+          <ul class="read-more__list swiper-wrapper">
+            <li class="read-more__item swiper-slide" style="background-image: url('img/read-more__img01.jpg');background-size: cover;">
+              <span class="read-more__title">КАК все успевать</span>
+              <a href="" class="read-more__link">Смотреть</a>
+            </li>
+            <li class="read-more__item swiper-slide" style="background-image: url('img/read-more__img02.jpg');background-size: cover;">
+              <span class="read-more__title">КАК все успевать</span>
+              <a href="" class="read-more__link">Смотреть</a>
+            </li>
+            <li class="read-more__item swiper-slide" style="background-image: url('img/read-more__img03.jpg');background-size: cover;">
+              <span class="read-more__title">КАК все успевать</span>
+              <a href="" class="read-more__link">Смотреть</a>
+            </li>
+            <li class="read-more__item swiper-slide" style="background-image: url('img/read-more__img04.jpg');background-size: cover;">
+              <span class="read-more__title">КАК все успевать</span>
+              <a href="" class="read-more__link">Смотреть</a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="read-more__swiper-controls"> -->
+          <span class="read-more__swiper-btn read-more__swiper-btn--prev swiper--prev"></span>
+          <span class="read-more__swiper-btn read-more__swiper-btn--next swiper--next"></span>
+        <!-- </div> -->
+      </section>
     </div>
   </main>
 
@@ -284,10 +288,10 @@
       <path d="M9.71854 9.67104L1.17341 1.20474L1.20936 8.96332L1.25224 18.2162L9.71854 9.67104Z" />
     </symbol>
     <symbol id="arrow-pgn-prev">
-      <path d="M0.707092 7.00326L5.88346 1.87465L5.86185 6.53794L5.8357 12.1796L0.707092 7.00326Z"/>
+      <path d="M0.707092 7.00326L5.88346 1.87465L5.86185 6.53794L5.8357 12.1796L0.707092 7.00326Z" />
     </symbol>
     <symbol id="arrow-pgn-next">
-      <path d="M6.01209 7.00326L0.835719 1.87465L0.85733 6.53794L0.883474 12.1796L6.01209 7.00326Z"/>
+      <path d="M6.01209 7.00326L0.835719 1.87465L0.85733 6.53794L0.883474 12.1796L6.01209 7.00326Z" />
     </symbol>
   </svg>
   //=require templates/script.html

@@ -9,6 +9,8 @@
 }
 
 .main__column {
+  margin-bottom: 40px;
+
   &--left {
     flex-basis: 768px;
   }
@@ -19,7 +21,7 @@
 }
 
 .main__bottom-row {
-  width: 100%;
+  padding: 40px 0;
 }
 
 .main__title {
@@ -45,7 +47,8 @@
   width: 100%;
   max-width: 170px;
   text-align: center;
-  transition: all 0.1s;
+  transition: all 0.3s;
+  z-index: 5;
 
   &:hover {
     background: $color-accent;
@@ -64,4 +67,22 @@
       background: url("../../img/btn__arrow.png") no-repeat center right;
     }
   }
+}
+
+.main__promo {
+  min-height: 176px;
+  display: flex;
+  align-items: center;
+  background: url("../img/reviews__promo-back.jpg") no-repeat center / cover;
+  justify-content: center;
+}
+
+.main__promo-title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 35px;
 }

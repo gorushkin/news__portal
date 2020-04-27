@@ -16,11 +16,12 @@ const resetBtns = () => {
   });
 }
 
-var headerSwiper = new Swiper('.header__swiper', {
+const headerSwiper = new Swiper('.header__swiper', {
   navigation: {
     nextEl: '.swiper--next',
     prevEl: '.swiper--prev',
   },
+  loop: true,
   on: {
     init: function () {
       disableBtns(prevBtns);
@@ -34,5 +35,15 @@ var headerSwiper = new Swiper('.header__swiper', {
     reachEnd: function () {
       disableBtns(nextBtns);
     },
+  },
+});
+
+const readMoreSwiper = new Swiper('.read-more__swiper', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper--next',
+    prevEl: '.swiper--prev',
   },
 });

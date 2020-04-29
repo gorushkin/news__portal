@@ -21,6 +21,14 @@ const headerSwiper = new Swiper('.header__swiper', {
     nextEl: '.swiper--next',
     prevEl: '.swiper--prev',
   },
+  pagination: {
+    el: '.slider__pagination',
+    // dynamicBullets: true,
+    // type: 'fraction',
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"></span>';
+    },
+  },
   loop: true,
   on: {
     init: function () {

@@ -5,13 +5,24 @@
   height: 100%;
   width: 100%;
 
+  @include wide-mobile {
+    min-height: 370px;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
     padding-top: 63px;
     padding-bottom: 47px;
+
+    @include wide-mobile {
+      padding-top: 25px;
+      padding-bottom: 0
+    }
   }
 }
 
@@ -24,6 +35,10 @@
   padding: 4px 21px;
   text-transform: uppercase;
   margin-bottom: 44px;
+
+  @include wide-mobile {
+    margin-bottom: 30px;
+  }
 }
 
 .card__title {
@@ -33,8 +48,13 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 300;
-  // margin-bottom: 42px;
   margin-bottom: 142px;
+
+  @include wide-mobile {
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 25px;
+  }
 }
 
 .card__text {

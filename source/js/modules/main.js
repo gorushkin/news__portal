@@ -47,3 +47,16 @@ const readMoreSwiper = new Swiper('.read-more__swiper', {
     prevEl: '.swiper--prev',
   },
 });
+
+(function() {
+  const openBtn = document.querySelector('.header__menu-btn--open');
+  const closeBtn = document.querySelector('.header__menu-btn--close');
+  const navMenu = document.querySelector('.js__menu');
+
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    navMenu.classList.add('js__show');
+    closeBtn.classList.add('js__show');
+  })
+
+})();

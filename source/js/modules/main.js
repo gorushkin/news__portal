@@ -53,10 +53,16 @@ const readMoreSwiper = new Swiper('.read-more__swiper', {
   const closeBtn = document.querySelector('.header__menu-btn--close');
   const navMenu = document.querySelector('.js__menu');
 
-  openBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+  const closeMenu = (evt) => {
+    evt.preventDefault();
+    navMenu.classList.remove('js__show');
+    closeBtn.removeEventListener('click', closeMenu);
+  }
+
+  openBtn.addEventListener('click', (evt) => {
+    evt.preventDefault();
     navMenu.classList.add('js__show');
-    closeBtn.classList.add('js__show');
+    closeBtn.addEventListener('click', closeMenu);
   })
 
 })();

@@ -15,21 +15,23 @@
     <div class="header__menu-btn header__menu-btn--open js__openBtn">
       <span></span>
     </div>
-    <div class="header__menu-btn header__menu-btn--close"></div>
     <div class="wrapper">
       <nav class="header__nav nav">
         <h2 class="nav__title">Новости культуры</h2>
-        <ul class="nav__list js__menu">
-          <li class="nav__item"><a href="#">НОВОСТИ</a></li>
-          <li class="nav__item"><a href="#">ОБЗОРЫ</a></li>
-          <li class="nav__item"><a href="#">МУЗЫКА</a></li>
-          <li class="nav__item"><a href="#">АРХИТЕКТУРА</a></li>
-          <li class="nav__item"><a href="#">КИНО</a></li>
-          <li class="nav__item"><a href="#">ТЕАТР</a></li>
-          <li class="nav__item"><a href="#">ЛИТЕРАТУРА</a></li>
-          <li class="nav__item"><a href="#">РЕЛИГИЯ</a></li>
-          <li class="nav__item"><a href="#">ЖИВОПИСЬ</a></li>
-        </ul>
+        <div class="header__menu-wrapper js__menu">
+          <div class="header__menu-btn header__menu-btn--close"></div>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#">НОВОСТИ</a></li>
+            <li class="nav__item"><a href="#">ОБЗОРЫ</a></li>
+            <li class="nav__item"><a href="#">МУЗЫКА</a></li>
+            <li class="nav__item"><a href="#">АРХИТЕКТУРА</a></li>
+            <li class="nav__item"><a href="#">КИНО</a></li>
+            <li class="nav__item"><a href="#">ТЕАТР</a></li>
+            <li class="nav__item"><a href="#">ЛИТЕРАТУРА</a></li>
+            <li class="nav__item"><a href="#">РЕЛИГИЯ</a></li>
+            <li class="nav__item"><a href="#">ЖИВОПИСЬ</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
     <div class="header__swiper swiper-container">
@@ -86,7 +88,7 @@
           <a href="" class="header__btn header__btn--next swiper--next">Следущая</a>
         </div>
       </div>
-      
+
     </div>
   </header>
 
@@ -319,6 +321,64 @@
     </symbol>
   </svg>
   //=require templates/script.html
+  <script>
+    // Add this script before other scripts in HTML file
+    (function () {
+      window.__listeners__ = {
+        listenersCount: 0
+      };
+ 
+ 
+      Element.prototype.addEventListener = new Proxy(Element.prototype.addEventListener, {
+        apply: function(target, thisArg, argumentsList) {
+          let type = argumentsList[0];
+          let fn = argumentsList[1];
+ 
+          if (!window.__listeners__[type]) {
+            window.__listeners__[type] = [];
+          }
+ 
+          console.log(`%cADD: event ${type} to`, 'color: blue; border: 1px solid blue; padding: 10px;', thisArg, fn);
+          window.__listeners__[type].push({
+            type: type,
+            fn: fn,
+            element: thisArg
+          });
+          window.__listeners__.listenersCount++;
+ 
+          return target.apply(thisArg, argumentsList);
+        }
+      });
+ 
+      Element.prototype.removeEventListener = new Proxy(Element.prototype.removeEventListener, {
+        apply: function(target, thisArg, argumentsList) {
+          let type = argumentsList[0];
+          let fn = argumentsList[1];
+ 
+          console.log(`%cATTEMPT TO REMOVE: event ${type} from`, 'color: green; border: 1px solid green; padding: 10px;', thisArg, fn);
+ 
+          if (!window.__listeners__[type]) {
+            return;
+          }
+ 
+ 
+          window.__listeners__[type].forEach(function (item) {
+            if (!item.fn === fn && item.element === thisArg && item.type === type) {
+              return;
+            }
+            let index = window.__listeners__[type].indexOf(item);
+ 
+            window.__listeners__[type] = [
+              ...window.__listeners__[type].slice(0, index),
+              ...window.__listeners__[type].slice(index + 1)
+            ];
+            console.log(`%cREMOVE: event ${type} from`, 'color: orange; border: 1px solid orange; padding: 10px;', thisArg, fn);
+            window.__listeners__.listenersCount--;
+          });
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>

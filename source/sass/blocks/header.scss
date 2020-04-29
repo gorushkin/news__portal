@@ -17,11 +17,7 @@
   font-family: $font2;
 }
 
-.nav__list {
-  display: flex;
-  flex-wrap: wrap;
-  transition: all 0.3s;
-
+.header__menu-wrapper {
   @include wide-mobile {
     position: absolute;
     top: 0;
@@ -29,10 +25,20 @@
     right: 0;
     background: #ffffff;
     z-index: 10;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include wide-mobile {
     flex-direction: column;
     padding-top: 76px;
-    transform: translateX(-100%);
   }
+
 }
 
 .nav__item {
@@ -194,6 +200,7 @@
 
 .header__menu-btn {
   display: none;
+  cursor: pointer;
 
   @include wide-mobile {
     position: absolute;
@@ -203,7 +210,6 @@
     padding: 10px;
 
     &--open {
-      // display: block;
       left: 0;
       background: $color-accent;
       display: flex;
@@ -237,16 +243,36 @@
     }
 
     &--close {
+      display: block;
       right: 0;
-      background: red;
       z-index: 15;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 2px;
+        background: rgba($color: #000000, $alpha: 0.3);
+      }
+
+      &::after {
+        transform-origin: 0;
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform-origin: 35px 15px;
+        transform: rotate(-45deg);
+      }
+
     }
   }
 }
 
 .js__show {
-  // &--show {
-    display: block;
-    transform: translateX(0);
-  // }
-};
+  display: block;
+  transform: translateX(0);
+}
+
+;

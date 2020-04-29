@@ -1,5 +1,6 @@
 .events {
   height: 100%;
+  outline: 2px solid blue;
 }
 
 .events__list {
@@ -8,6 +9,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include laptop {
+    flex-direction: row;
+  }
 }
 
 .events__item {
@@ -18,6 +23,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @include laptop {
+    margin-bottom: 25px;
+    width: 240px;
+    outline: 2px solid red;
+    min-height: 350px;
+  } 
 
   &:nth-child(1) {
     background: url("../../img/event__img01.jpg") no-repeat center / cover;
@@ -40,6 +52,11 @@
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
+
+  @include laptop {
+    font-size: 20px;
+    line-height: 35px;
+  }
 
   &--white {
     color: #ffffff

@@ -145,4 +145,8 @@
   max-width: 430px;
   margin: 0 auto;
   margin-bottom: 80px;
+
+  @include laptop {
+    margin-bottom: 5px;
+  }
 }

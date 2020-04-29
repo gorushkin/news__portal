@@ -13,18 +13,21 @@
 
 .news__item {
   width: 270px;
-  height: 91px;
+  flex: 0 1 91px;
   align-self: end;
   display: flex;
   justify-content: space-between;
 
   &--big {
-    width: 470px;
-    height: 334px;
+    max-width: 470px;
+    width: 100%;
+    flex: 0 1 100%;
     position: relative;
     flex-direction: column;
     justify-content: flex-end;
     padding: 21px 23px;
+
+
 
     .news__img-wrap {
       position: absolute;

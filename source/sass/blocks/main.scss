@@ -5,6 +5,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include laptop {
+      outline: 2px solid red;
+      max-width: 830px;
+    }
   }
 }
 
@@ -12,11 +17,16 @@
   margin-bottom: 40px;
 
   &--left {
-    flex-basis: 768px;
+    max-width: 770px;
   }
 
   &--right {
-    flex-basis: 370px;
+    max-width: 370px;
+  }
+
+  @include laptop {
+    max-width: none;
+    width: 100%;
   }
 }
 

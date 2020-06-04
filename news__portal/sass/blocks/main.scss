@@ -1,0 +1,98 @@
+.main {
+  padding-top: 100px;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include laptop {
+      outline: 2px solid red;
+      max-width: 830px;
+    }
+  }
+}
+
+.main__column {
+  margin-bottom: 40px;
+
+  &--left {
+    max-width: 770px;
+  }
+
+  &--right {
+    max-width: 370px;
+  }
+
+  @include laptop {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.main__bottom-row {
+  padding: 40px 0;
+}
+
+.main__title {
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.main__link {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid $color-accent;
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 100%;
+  max-width: 170px;
+  text-align: center;
+  transition: all 0.3s;
+  z-index: 5;
+
+  &:hover {
+    background: $color-accent;
+  }
+
+  span {
+    position: relative;
+
+    &::after {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      margin-left: 15px;
+      width: 16px;
+      height: 16px;
+      background: url("../../img/btn__arrow.png") no-repeat center right;
+    }
+  }
+}
+
+.main__promo {
+  min-height: 176px;
+  display: flex;
+  align-items: center;
+  background: url("../img/reviews__promo-back.jpg") no-repeat center / cover;
+  justify-content: center;
+}
+
+.main__promo-title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 35px;
+}

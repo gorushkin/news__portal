@@ -1,7 +1,0 @@
-console.log('test');
-
-const start = () => {
-  console.log('start');
-}
-
-exports.default = start;

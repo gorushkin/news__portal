@@ -1,6 +1,5 @@
 .events {
   height: 100%;
-  outline: 2px solid blue;
 }
 
 .events__list {
@@ -12,6 +11,10 @@
 
   @include laptop {
     flex-direction: row;
+  }
+
+  @include wide-mobile {
+    flex-direction: column;
   }
 }
 
@@ -26,10 +29,16 @@
 
   @include laptop {
     margin-bottom: 25px;
-    width: 240px;
-    outline: 2px solid red;
+    max-width: 240px;
+    width: 31%;
     min-height: 350px;
-  } 
+    padding: 25px 10px 20px 10px;
+  }
+
+  @include wide-mobile {
+    width: 100%;
+    max-width: none;
+  }
 
   &:nth-child(1) {
     background: url("../../img/event__img01.jpg") no-repeat center / cover;

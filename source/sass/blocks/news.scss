@@ -8,27 +8,54 @@
     "big small1"
     "big small2"
     "big small3";
-  grid-template-columns: minmax(270, 60%) 270px;
+  grid-template-columns: minmax(270px, 470px) 270px;
   grid-template-rows: 90px 90px 90px;
   column-gap: 30px;
   row-gap: 30px;
   min-height: 330px;
+
+  @include wide-mobile {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    max-width: 360px;
+    margin: 0 auto;
+  }
 }
 
 .news__item {
   display: flex;
   justify-content: space-between;
 
+  @include wide-mobile {
+    width: 100%;
+    min-height: 90px;
+    margin-bottom: 30px;
+    // justify-content: flex-start;
+  }
+
   &:nth-child(2) {
     grid-area: small1;
+
+    .news__img-wrap {
+      background: url("../img/news__img02.jpg") no-repeat center / cover;
+    }
   }
 
   &:nth-child(3) {
     grid-area: small2;
+
+    .news__img-wrap {
+      background: url("../img/news__img03.jpg") no-repeat center / cover;
+    }
   }
 
   &:nth-child(4) {
     grid-area: small3;
+
+    .news__img-wrap {
+      background: url("../img/news__img04.jpg") no-repeat center / cover;
+    }
   }
 
   &--big {
@@ -39,7 +66,13 @@
     padding: 21px 23px;
     grid-area: big;
 
+    @include wide-mobile {
+      width: 100%;
+      min-height: 290px;
+    }
+
     .news__img-wrap {
+      background: url("../img/news__img01.jpg") no-repeat center / cover;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -66,36 +99,17 @@
       }
     }
   }
-
-  &:nth-child(1) {
-    .news__img-wrap {
-      background: url("../img/news__img01.jpg") no-repeat center / cover;
-    }
-  }
-
-  &:nth-child(2) {
-    .news__img-wrap {
-      background: url("../img/news__img02.jpg") no-repeat center / cover;
-    }
-  }
-
-  &:nth-child(3) {
-    .news__img-wrap {
-      background: url("../img/news__img03.jpg") no-repeat center / cover;
-    }
-  }
-
-  &:nth-child(4) {
-    .news__img-wrap {
-      background: url("../img/news__img04.jpg") no-repeat center / cover;
-    }
-  }
 }
 
 .news__img-wrap {
   width: 127px;
   height: 100%;
   background: red;
+
+  @include wide-mobile {
+    min-height: 90px;
+    margin-right: 30px;
+  }
 }
 
 .news__description {
@@ -106,6 +120,10 @@
   justify-content: space-between;
   position: relative;
   z-index: 1;
+
+  @include wide-mobile {
+    width: 100%;
+  }
 
   h4 {
     font-weight: 900;

@@ -1,7 +1,9 @@
 .main {
   padding-top: 100px;
-  padding-bottom: 150px;
 
+  @include tablet {
+    padding-bottom: 25px;
+  }
 
   @include wide-mobile {
     padding-top: 50px;
@@ -31,6 +33,10 @@
 
   &--right {
     max-width: 370px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 
   @include laptop {
@@ -42,7 +48,7 @@
 .main__bottom-row {
   padding: 40px 0;
 
-  @include wide-mobile {
+  @include tablet {
     padding: 0;
   }
 }

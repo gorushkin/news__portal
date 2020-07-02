@@ -1217,7 +1217,7 @@ body {
   .nav__item a::after {
     width: 25px;
     height: 25px;
-    background: url("../../img/icon__arrow.svg") no-repeat center;
+    background: url("../img/icon__arrow.svg") no-repeat center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1688,7 +1688,7 @@ body {
   margin-left: 15px;
   width: 16px;
   height: 16px;
-  background: url("../../img/btn__arrow.png") no-repeat center right;
+  background: url("../img/btn__arrow.png") no-repeat center right;
 }
 
 .main__promo {
@@ -2146,15 +2146,15 @@ body {
 }
 
 .events__item:nth-child(1) {
-  background: url("../../img/event__img01.jpg") no-repeat center/cover;
+  background: url("../img/event__img01.jpg") no-repeat center/cover;
 }
 
 .events__item:nth-child(2) {
-  background: url("../../img/event__img02.jpg") no-repeat center/cover;
+  background: url("../img/event__img02.jpg") no-repeat center/cover;
 }
 
 .events__item:nth-child(3) {
-  background: url("../../img/event__img03.jpg") no-repeat center/cover;
+  background: url("../img/event__img03.jpg") no-repeat center/cover;
 }
 
 .events__title {
@@ -2269,12 +2269,12 @@ body {
 
 .read-more__swiper-btn--prev {
   left: -22px;
-  background: url("../../img/icon__rectangle--prev.svg") no-repeat center, #ffffff;
+  background: url("../img/icon__rectangle--prev.svg") no-repeat center, #ffffff;
 }
 
 .read-more__swiper-btn--next {
   right: -22px;
-  background: url("../../img/icon__rectangle--next.svg") no-repeat center, #ffffff;
+  background: url("../img/icon__rectangle--next.svg") no-repeat center, #ffffff;
 }
 
 .read-more__title {
@@ -2339,7 +2339,7 @@ body {
 
 .webp .card{ background: url(../img/header__back01.webp) no-repeat center/cover; }
 
-.webp .main__link span::after{ background: url(../../img/btn__arrow.webp) no-repeat center right; }
+.webp .main__link span::after{ background: url(../img/btn__arrow.webp) no-repeat center right; }
 
 .webp .main__promo{ background: url(../img/reviews__promo-back.webp) no-repeat center/cover; }
 
@@ -2359,10 +2359,10 @@ body {
 
 .webp .reviews__item:nth-child(4) .review__img-wrapper{ background: url(../img/review_img04.webp) no-repeat center/cover; }
 
-.webp .events__item:nth-child(1){ background: url(../../img/event__img01.webp) no-repeat center/cover; }
+.webp .events__item:nth-child(1){ background: url(../img/event__img01.webp) no-repeat center/cover; }
 
-.webp .events__item:nth-child(2){ background: url(../../img/event__img02.webp) no-repeat center/cover; }
+.webp .events__item:nth-child(2){ background: url(../img/event__img02.webp) no-repeat center/cover; }
 
-.webp .events__item:nth-child(3){ background: url(../../img/event__img03.webp) no-repeat center/cover; }
+.webp .events__item:nth-child(3){ background: url(../img/event__img03.webp) no-repeat center/cover; }
 
 /*# sourceMappingURL=style.css.map */

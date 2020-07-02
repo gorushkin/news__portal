@@ -1,0 +1,11 @@
+.footer {
+  background: #F7F7F7;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.footer__nav {
+  padding-top: 30px;
+}

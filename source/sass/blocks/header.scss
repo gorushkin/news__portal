@@ -40,6 +40,7 @@
     z-index: 10;
     transform: translateX(-100%);
     transition: all 0.3s;
+    overflow-y: auto;
   }
 }
 
@@ -52,11 +53,7 @@
     padding-top: 76px;
     max-width: 600px;
     margin: 0 auto;
-    // padding-left: 100px;
-    // padding-right: 100px;
-    // margin-left: auto;
   }
-
 }
 
 .nav__item {
@@ -166,7 +163,9 @@
 
     &--close {
       display: block;
+      position: fixed;
       right: 0;
+      top: 0;
       z-index: 15;
 
       &::after,

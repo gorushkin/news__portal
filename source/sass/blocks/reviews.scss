@@ -4,7 +4,10 @@
 }
 
 .reviews__list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 30px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -12,8 +15,6 @@
 }
 
 .reviews__item {
-  flex-basis: 370px;
-  min-width: 328px;
   margin-bottom: 38px;
 
   &:nth-child(1) {

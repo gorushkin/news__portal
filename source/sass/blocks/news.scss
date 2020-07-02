@@ -8,7 +8,7 @@
     "big small1"
     "big small2"
     "big small3";
-  grid-template-columns: 470px 270px;
+  grid-template-columns: minmax(270, 60%) 270px;
   grid-template-rows: 90px 90px 90px;
   column-gap: 30px;
   row-gap: 30px;

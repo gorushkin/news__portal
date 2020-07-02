@@ -1151,6 +1151,7 @@ body {
     z-index: 10;
     transform: translateX(-100%);
     transition: all 0.3s;
+    overflow-y: auto;
   }
 }
 
@@ -1277,7 +1278,9 @@ body {
   }
   .header__menu-btn--close {
     display: block;
+    position: fixed;
     right: 0;
+    top: 0;
     z-index: 15;
   }
   .header__menu-btn--close::after, .header__menu-btn--close::before {
@@ -1575,7 +1578,7 @@ body {
 
 @media (max-width: 991px) {
   .main {
-    padding-bottom: 25px;
+    padding-bottom: 60px;
   }
 }
 

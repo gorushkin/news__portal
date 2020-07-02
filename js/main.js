@@ -150,12 +150,14 @@ const readMoreSwiper = new Swiper('.read-more__swiper', {
     evt.preventDefault();
     navMenu.classList.remove('js__show');
     closeBtn.removeEventListener('click', closeMenu);
+    document.body.style.overflow = '';
   }
 
   openBtn.addEventListener('click', (evt) => {
     evt.preventDefault();
     navMenu.classList.add('js__show');
     closeBtn.addEventListener('click', closeMenu);
+    document.body.style.overflow = 'hidden';
   })
 
 })();

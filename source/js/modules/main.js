@@ -23,8 +23,6 @@ const headerSwiper = new Swiper('.header__swiper', {
   },
   pagination: {
     el: '.slider__pagination',
-    // dynamicBullets: true,
-    // type: 'fraction',
     renderBullet: function (index, className) {
       return '<span class="' + className + '"></span>';
     },
@@ -47,16 +45,30 @@ const headerSwiper = new Swiper('.header__swiper', {
 });
 
 const readMoreSwiper = new Swiper('.read-more__swiper', {
-  slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
-  navigation: {
-    nextEl: '.swiper--next',
-    prevEl: '.swiper--prev',
-  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      pagination: {
+        el: '.read-more__swiper-pagination',
+        renderBullet: function (index, className) {
+          return '<span class="read-more__swiper-bullet ' + className + '"></span>';
+        },
+      },
+    },
+    768: {
+      slidesPerView: 4,
+      navigation: {
+        nextEl: '.swiper--next',
+        prevEl: '.swiper--prev',
+      },
+    }
+  }
 });
 
-(function() {
+(function () {
   const openBtn = document.querySelector('.header__menu-btn--open');
   const closeBtn = document.querySelector('.header__menu-btn--close');
   const navMenu = document.querySelector('.js__menu');

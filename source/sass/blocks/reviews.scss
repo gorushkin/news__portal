@@ -12,10 +12,20 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 50px;
+
+  @include wide-mobile {
+    display: flex;
+    flex-direction: column;
+
+  }
 }
 
 .reviews__item {
   margin-bottom: 38px;
+
+  @include wide-mobile {
+    margin-bottom: 10px;
+  }
 
   &:nth-child(1) {
     .review__img-wrapper {
@@ -48,6 +58,10 @@
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
+
+  @include wide-mobile {
+    margin-bottom: 15px;
+  }
 }
 
 .review {

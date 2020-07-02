@@ -1,5 +1,11 @@
 .main {
   padding-top: 100px;
+  padding-bottom: 150px;
+
+
+  @include wide-mobile {
+    padding-top: 50px;
+  }
 
   .wrapper {
     display: flex;
@@ -7,8 +13,11 @@
     justify-content: space-between;
 
     @include laptop {
-      outline: 2px solid red;
       max-width: 830px;
+    }
+
+    @include wide-mobile {
+      max-width: 480px;
     }
   }
 }
@@ -32,6 +41,10 @@
 
 .main__bottom-row {
   padding: 40px 0;
+
+  @include wide-mobile {
+    padding: 0;
+  }
 }
 
 .main__title {
@@ -41,6 +54,12 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 15px;
+
+  @include wide-mobile {
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
 }
 
 .main__link {
@@ -85,6 +104,10 @@
   align-items: center;
   background: url("../img/reviews__promo-back.jpg") no-repeat center / cover;
   justify-content: center;
+
+  @include wide-mobile {
+    flex-direction: column;
+  }
 }
 
 .main__promo-title {
@@ -95,4 +118,13 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-right: 35px;
+
+  @include wide-mobile {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 0;
+  }
 }

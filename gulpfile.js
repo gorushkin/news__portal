@@ -77,11 +77,6 @@ const css = () => gulp.src(path.src.css)
   }))
   .pipe(postcss([autoprefixer()]))
   .pipe(webpcss())
-  .pipe(gulp.dest(path.build.css))
-  .pipe(rename({
-    extname: '.min.css'
-  }))
-  .pipe(postcss([cssNano()]))
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(path.build.css))
   .pipe(server.stream());

@@ -85,7 +85,6 @@ const copy = () => gulp.src([
     path.src.img,
     path.src.fonts,
     path.src.pp,
-    path.src.scss,
   ], {
     base: 'source',
   })
